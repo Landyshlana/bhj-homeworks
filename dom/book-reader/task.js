@@ -8,12 +8,12 @@ fontsizes.forEach(fontsize => {
 		});
 		event.target.classList.add("font-size_active");
 		size = event.target.getAttribute("data-size");
+		book.classList.remove("book_fs-big");
+		book.classList.remove("book_fs-small");
 		if (size === "big") {
 			book.classList.add("book_fs-big")
 		} else if (size === "small") {
 			book.classList.add("book_fs-small")
-		} else {
-			book.classList.remove("book_fs-big") || book.classList.remove("book_fs-small")
 		}
 		event.preventDefault();
 	})
