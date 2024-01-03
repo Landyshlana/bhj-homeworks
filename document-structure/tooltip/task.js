@@ -1,4 +1,5 @@
 let hastooltips = document.querySelectorAll(".has-tooltip");
+let body = document.querySelector("body");
 hastooltips.forEach(hastooltip => {
 	let title = hastooltip.getAttribute("title");
 	let tooltip = document.createElement("div");
@@ -12,7 +13,7 @@ hastooltips.forEach(hastooltip => {
 
 		tooltip.style.top = `${positiontop + height}px`;
 		tooltip.style.left = `${positionleft}px`;
-		hastooltip.appendChild(tooltip);
+		body.appendChild(tooltip);
 		event.preventDefault();
 	});
 });
